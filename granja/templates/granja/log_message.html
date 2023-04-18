@@ -1,0 +1,15 @@
+{% extends "granja/base.html" %}
+{% block title%}
+    Log Message
+{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid"
+<form method="POST" class="log-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn-default"> Salvar </button>
+    </form>
+</div>
+{% endblock %}
